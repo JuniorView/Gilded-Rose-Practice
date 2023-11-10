@@ -9,9 +9,9 @@
 #ifndef ITEM_H
 #define ITEM_H
 
+#include <ostream>
 #include <string>
 #include <vector>
-#include <ostream>
 
 using namespace std;
 
@@ -22,17 +22,17 @@ public:
   string name;
   int sellIn;
   int quality;
-  Item(std::string name, int sellIn, int quality) : name(name), sellIn(sellIn), quality(quality)
-  {};
+  Item(std::string name, int sellIn, int quality)
+      : name(name)
+      , sellIn(sellIn)
+      , quality(quality){};
   ItemType typeOf() const;
 
-  friend ostream& operator<<(ostream& os, const Item& item);
+  friend ostream &operator<<(ostream &os, const Item &item);
 
-  bool equals(const std::string name, int sellIn, int quality); 
-
+  bool equals(const std::string name, int sellIn, int quality);
 
 protected:
-
 };
 
 #endif // ITEM_H

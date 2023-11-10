@@ -14,7 +14,7 @@ using namespace std;
 
 #include "Item.h"
 
-/* We should use inheritance but the goblin will not let me do it! 
+/* We should use inheritance but the goblin will not let me do it!
 // Do not delete this code. You will need it!
 class LegendaryItem : public Item {
 public:

@@ -6,7 +6,7 @@
 // #define TEST_CONJURED_ITEMS
 
 TEST(GildedRoseTest, Day01) {
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("+5 Dexterity Vest", 10, 20));
@@ -19,19 +19,18 @@ TEST(GildedRoseTest, Day01) {
   items.push_back(G.createItem("Backstage passes to a TAFKAL80ETC concert", 5, 49));
 
   G.updateQuality();
-  EXPECT_TRUE(G.items[0]->equals("+5 Dexterity Vest",9,19));
-  EXPECT_TRUE(G.items[1]->equals("Aged Brie",1,1));
-  EXPECT_TRUE(G.items[2]->equals("Elixir of the Mongoose",4,6));
-  EXPECT_TRUE(G.items[3]->equals("Sulfuras, Hand of Ragnaros",0,80));
+  EXPECT_TRUE(G.items[0]->equals("+5 Dexterity Vest", 9, 19));
+  EXPECT_TRUE(G.items[1]->equals("Aged Brie", 1, 1));
+  EXPECT_TRUE(G.items[2]->equals("Elixir of the Mongoose", 4, 6));
+  EXPECT_TRUE(G.items[3]->equals("Sulfuras, Hand of Ragnaros", 0, 80));
   EXPECT_TRUE(G.items[4]->equals("Sulfuras, Hand of Ragnaros", -1, 80));
   EXPECT_TRUE(G.items[5]->equals("Backstage passes to a TAFKAL80ETC concert", 14, 21));
   EXPECT_TRUE(G.items[6]->equals("Backstage passes to a TAFKAL80ETC concert", 9, 50));
   EXPECT_TRUE(G.items[7]->equals("Backstage passes to a TAFKAL80ETC concert", 4, 50));
-
 }
 
 TEST(GildedRoseTest, Day02) {
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("+5 Dexterity Vest", 10, 20));
@@ -54,13 +53,12 @@ TEST(GildedRoseTest, Day02) {
   EXPECT_TRUE(G.items[5]->equals("Backstage passes to a TAFKAL80ETC concert", 13, 22));
   EXPECT_TRUE(G.items[6]->equals("Backstage passes to a TAFKAL80ETC concert", 8, 50));
   EXPECT_TRUE(G.items[7]->equals("Backstage passes to a TAFKAL80ETC concert", 3, 50));
-
 }
 
 TEST(GildedRoseTest, Day05) {
-  const int NO_OF_DAYS =5;
+  const int NO_OF_DAYS = 5;
 
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("+5 Dexterity Vest", 10, 20));
@@ -72,7 +70,7 @@ TEST(GildedRoseTest, Day05) {
   items.push_back(G.createItem("Backstage passes to a TAFKAL80ETC concert", 10, 49));
   items.push_back(G.createItem("Backstage passes to a TAFKAL80ETC concert", 5, 49));
 
-  for (int i=1; i<=NO_OF_DAYS;i++) {
+  for (int i = 1; i <= NO_OF_DAYS; i++) {
     G.updateQuality();
   }
 
@@ -84,13 +82,12 @@ TEST(GildedRoseTest, Day05) {
   EXPECT_TRUE(G.items[5]->equals("Backstage passes to a TAFKAL80ETC concert", 10, 25));
   EXPECT_TRUE(G.items[6]->equals("Backstage passes to a TAFKAL80ETC concert", 5, 50));
   EXPECT_TRUE(G.items[7]->equals("Backstage passes to a TAFKAL80ETC concert", 0, 50));
-
 }
 
 TEST(GildedRoseTest, Day20) {
-  const int NO_OF_DAYS =20;
+  const int NO_OF_DAYS = 20;
 
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("+5 Dexterity Vest", 10, 20));
@@ -102,7 +99,7 @@ TEST(GildedRoseTest, Day20) {
   items.push_back(G.createItem("Backstage passes to a TAFKAL80ETC concert", 10, 49));
   items.push_back(G.createItem("Backstage passes to a TAFKAL80ETC concert", 5, 49));
 
-  for (int i=1; i<=NO_OF_DAYS;i++) {
+  for (int i = 1; i <= NO_OF_DAYS; i++) {
     G.updateQuality();
   }
 
@@ -117,9 +114,9 @@ TEST(GildedRoseTest, Day20) {
 }
 
 TEST(GildedRoseTest, Day30) {
-  const int NO_OF_DAYS =30;
+  const int NO_OF_DAYS = 30;
 
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("+5 Dexterity Vest", 10, 20));
@@ -131,7 +128,7 @@ TEST(GildedRoseTest, Day30) {
   items.push_back(G.createItem("Backstage passes to a TAFKAL80ETC concert", 10, 49));
   items.push_back(G.createItem("Backstage passes to a TAFKAL80ETC concert", 5, 49));
 
-  for (int i=1; i<=NO_OF_DAYS;i++) {
+  for (int i = 1; i <= NO_OF_DAYS; i++) {
     G.updateQuality();
   }
 
@@ -143,7 +140,6 @@ TEST(GildedRoseTest, Day30) {
   EXPECT_TRUE(G.items[5]->equals("Backstage passes to a TAFKAL80ETC concert", -15, 0));
   EXPECT_TRUE(G.items[6]->equals("Backstage passes to a TAFKAL80ETC concert", -20, 0));
   EXPECT_TRUE(G.items[7]->equals("Backstage passes to a TAFKAL80ETC concert", -25, 0));
-
 }
 
 #ifdef TEST_CONJURED_ITEMS
@@ -151,7 +147,7 @@ TEST(GildedRoseTest, Day30) {
 TEST(NewConjuredItemsTest, Day01) {
   const int NO_OF_DAYS = 1;
 
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
@@ -161,13 +157,13 @@ TEST(NewConjuredItemsTest, Day01) {
   }
   cout << "\"Conjured\" items degrade in Quality twice as fast as normal items";
 
-  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake",2,4));
+  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake", 2, 4));
 }
 
 TEST(NewConjuredItemsTest, Day02) {
   const int NO_OF_DAYS = 2;
 
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
@@ -176,13 +172,13 @@ TEST(NewConjuredItemsTest, Day02) {
     G.updateQuality();
   }
 
-  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake",1,2));
+  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake", 1, 2));
 }
 
 TEST(NewConjuredItemsTest, Day05) {
   const int NO_OF_DAYS = 5;
 
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
@@ -191,14 +187,13 @@ TEST(NewConjuredItemsTest, Day05) {
     G.updateQuality();
   }
 
-
-  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake",-2,0));
+  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake", -2, 0));
 }
 
 TEST(NewConjuredItemsTest, Day20) {
   const int NO_OF_DAYS = 20;
 
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
@@ -207,13 +202,13 @@ TEST(NewConjuredItemsTest, Day20) {
     G.updateQuality();
   }
 
-  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake",-17,0));
+  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake", -17, 0));
 }
 
 TEST(NewConjuredItemsTest, Day30) {
   const int NO_OF_DAYS = 30;
 
-  vector<Item*> items;
+  vector<Item *> items;
   GildedRose G(items);
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
@@ -222,6 +217,6 @@ TEST(NewConjuredItemsTest, Day30) {
     G.updateQuality();
   }
 
-  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake",-27,0));
+  EXPECT_TRUE(G.items[0]->equals("Conjured Mana Cake", -27, 0));
 }
 #endif
