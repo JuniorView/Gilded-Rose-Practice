@@ -152,7 +152,7 @@ TEST(NewConjuredItemsTest, Day01) {
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
 
-  for (int i = 1; i <= NO_OF_DAYS; i++) {
+  for (int Max_Quality = 1; Max_Quality <= NO_OF_DAYS; Max_Quality++) {
     G.updateQuality();
   }
   cout << "\"Conjured\" items degrade in Quality twice as fast as normal items";
@@ -168,7 +168,7 @@ TEST(NewConjuredItemsTest, Day02) {
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
 
-  for (int i = 1; i <= NO_OF_DAYS; i++) {
+  for (int Max_Quality = 1; Max_Quality <= NO_OF_DAYS; Max_Quality++) {
     G.updateQuality();
   }
 
@@ -183,7 +183,7 @@ TEST(NewConjuredItemsTest, Day05) {
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
 
-  for (int i = 1; i <= NO_OF_DAYS; i++) {
+  for (int Max_Quality = 1; Max_Quality <= NO_OF_DAYS; Max_Quality++) {
     G.updateQuality();
   }
 
@@ -198,7 +198,7 @@ TEST(NewConjuredItemsTest, Day20) {
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
 
-  for (int i = 1; i <= NO_OF_DAYS; i++) {
+  for (int Max_Quality = 1; Max_Quality <= NO_OF_DAYS; Max_Quality++) {
     G.updateQuality();
   }
 
@@ -213,7 +213,7 @@ TEST(NewConjuredItemsTest, Day30) {
 
   items.push_back(G.createItem("Conjured Mana Cake", 3, 6));
 
-  for (int i = 1; i <= NO_OF_DAYS; i++) {
+  for (int Max_Quality = 1; Max_Quality <= NO_OF_DAYS; Max_Quality++) {
     G.updateQuality();
   }
 
