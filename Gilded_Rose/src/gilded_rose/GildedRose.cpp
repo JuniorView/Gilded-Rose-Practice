@@ -39,7 +39,7 @@ void GildedRose::updateQuality_ForBackstagePasses(Item* item){
 }
 
 void GildedRose::updateQuality_ForConjuredManacake(Item* item){
-  // conjured Artikel verlieren doppekt so schnell an Qualität wie normale Artikel
+  // conjured Artikel verlieren doppekt so schnell an Qualität wie normale Artikels
   if(item->quality> Min_Quality){
     item->quality-=2;
   }

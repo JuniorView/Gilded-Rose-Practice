@@ -85,6 +85,7 @@ TEST(GildedRoseTest, Day05) {
 }
 
 TEST(GildedRoseTest, Day20) {
+
   const int NO_OF_DAYS = 20;
 
   vector<Item *> items;
