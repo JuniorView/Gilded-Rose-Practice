@@ -9,6 +9,9 @@
 #include "Item.h"
 #include "ItemTypes.h"
 
+Item::Item(){
+
+};
 bool Item::equals(const std::string name, int sellIn, int quality) {
   return this->name == name && this->sellIn == sellIn && this->quality == quality;
 }
@@ -18,18 +21,4 @@ ostream &operator<<(ostream &s, const Item &item) {
   return s;
 }
 
-ItemType Item::typeOf() const {
-  if (name == "Backstage passes to a TAFKAL80ETC concert") {
-    return EXPIRING;
-  }
-  if (name == "Sulfuras, Hand of Ragnaros") {
-    return LEGENDARY;
-  }
-  if (name == "Aged Brie") {
-    return MATURING;
-  }
-  if (name == "Conjured Mana Cake") {
-    return CONJURED;
-  }
-  return NORMAL;
-}
+void Item::updatesellIn() { sellIn -= 1; }

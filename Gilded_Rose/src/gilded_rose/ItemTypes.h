@@ -14,27 +14,40 @@ using namespace std;
 
 #include "Item.h"
 
-/* We should use inheritance but the goblin will not let me do it!
+// We should use inheritance but the goblin will not let me do it!
 // Do not delete this code. You will need it!
 class LegendaryItem : public Item {
 public:
-  LegendaryItem(string name, int sellIn, int quality) : Item(name, sellIn, quality){};
+  LegendaryItem(string i_name, int i_sellIn, int i_quality);
+
+  void updateAllItems() override;
 };
 
 class ConjuredItem : public Item {
 public:
-  ConjuredItem(string name, int sellIn, int quality) : Item(name, sellIn, quality){};
+  ConjuredItem(string i_name, int i_sellIn, int i_quality);
+
+  void updateAllItems() override;
 };
 
 class MaturingItem : public Item {
 public:
-  MaturingItem(string name, int sellIn, int quality) : Item(name, sellIn, quality){};
-};
+  MaturingItem(string i_name, int i_sellIn, int i_quality);
 
+  void updateAllItems() override;
+};
 class ExpiringItem : public Item {
 public:
-  ExpiringItem(string name, int sellIn, int quality) : Item(name, sellIn, quality){};
+  ExpiringItem(string i_name, int i_sellIn, int i_quality);
+
+  void updateAllItems() override;
 };
-*/
+
+class NormalItem : public Item {
+public:
+  NormalItem(string i_name, int i_sellIn, int i_quality);
+
+  void updateAllItems() override;
+};
 
 #endif // GILDEDROSE_ITEMTYPES_H

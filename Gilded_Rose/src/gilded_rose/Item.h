@@ -15,22 +15,27 @@
 
 using namespace std;
 
-enum ItemType { LEGENDARY, CONJURED, MATURING, EXPIRING, NORMAL };
+// enum ItemType { LEGENDARY, CONJURED, MATURING, EXPIRING, NORMAL };
 
 class Item {
 public:
+  const int Max_Quality = 50;
+  const int Min_Quality = 0;
+
   string name;
   int sellIn;
   int quality;
-  Item(std::string name, int sellIn, int quality)
-      : name(name)
-      , sellIn(sellIn)
-      , quality(quality){};
-  ItemType typeOf() const;
+
+  Item();
 
   friend ostream &operator<<(ostream &os, const Item &item);
 
   bool equals(const std::string name, int sellIn, int quality);
+
+  void updatesellIn();
+
+  virtual void updateAllItems() = 0;
+  virtual ~Item() = default;
 
 protected:
 };
