@@ -3,7 +3,7 @@
 #include "GildedRose.h"
 #include "Item.h"
 
-// #define TEST_CONJURED_ITEMS
+#define TEST_CONJURED_ITEMS
 
 TEST(GildedRoseTest, Day01) {
   vector<Item *> items;
