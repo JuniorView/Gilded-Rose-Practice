@@ -6,6 +6,7 @@ int main() {
     auto *systemBattery = new SystemBattery;
 
     Observer *batteryApp = new BatteryApp(*systemBattery, "Battery App");
+    Observer *batteryLogger = new BatteryLogger(*systemBattery, "Battery App");
 
     systemBattery->setBatteryLevel(87);
 
