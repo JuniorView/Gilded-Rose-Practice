@@ -6,6 +6,8 @@ add_library(gilded_rose STATIC
         "Item.h"
         "ItemTypes.cpp"
         "ItemTypes.h"
+        NormalItem.cpp
+        NormalItem.h
 )
 target_include_directories(gilded_rose PUBLIC .)
 

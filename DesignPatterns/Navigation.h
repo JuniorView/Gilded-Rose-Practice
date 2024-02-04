@@ -1,13 +1,18 @@
 #ifndef NAVIGATION_H
 #define NAVIGATION_H
-
+#include "NaviEconomicStrategy.h"
 class Navigation {
 public:
-    explicit Navigation();
+    explicit Navigation(NavigationStrategy* navigationStrategy);
+    void setNavigationStrategy(NavigationStrategy *navigation_Strategy);
     void init();
+    ~Navigation();
 
 private:
-    virtual void calculateRoute()=0;
+    //virtual void calculateRoute()=0; //removed from Navigation
+    NavigationStrategy*  navigationStrategy;
+
+
 
     // The copy constructor and the copy assignment operator should be declared private
     // For simplicity of the exercise we ignore the rule of three

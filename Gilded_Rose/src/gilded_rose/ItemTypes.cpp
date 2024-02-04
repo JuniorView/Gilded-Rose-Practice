@@ -6,39 +6,24 @@
 // But I did not have the time to do it!
 
 #include "ItemTypes.h"
-NormalItem::NormalItem(string i_name, int i_sellIn, int i_quality) {
-  name = i_name;
-  sellIn = i_sellIn;
-  quality = i_quality;
-}
-void NormalItem::updateAllItems() {
 
-  if (quality > Min_Quality) {
-    quality--;
-  }
-  updatesellIn();
+const int BACKSTAGE_PASS_10_DAYS = 10;
+const int BACKSTAGE_PASS_5_DAYS = 5;
 
-  // sicherstellen ,dass die  Qualität nicht negativ wird
-  if (this->quality < Min_Quality) {
-    this->quality = Min_Quality;
-  }
 
-  // Sicherstellen ,dass die Qualität nicht über 50 steigt (ausser bei" sulfuras" )
-  if (this->quality > Max_Quality) {
-    this->quality = Max_Quality;
-  }
-}
+
+
 ExpiringItem::ExpiringItem(string i_name, int i_sellIn, int i_quality) {
   name = i_name;
   sellIn = i_sellIn;
   quality = i_quality;
 }
-void ExpiringItem::updateAllItems() {
+void ExpiringItem::updateItems() {
 
   if (sellIn > Min_Quality) {
-    if (sellIn <= 10 && sellIn > 5 && quality <= 48) {
+    if (sellIn <= BACKSTAGE_PASS_10_DAYS && sellIn > BACKSTAGE_PASS_5_DAYS && quality <= 48) {
       this->quality += 2;
-    } else if (sellIn <= 5 && quality <= 47) {
+    } else if (sellIn <= BACKSTAGE_PASS_5_DAYS && quality <= 47) {
       quality += 3;
     } else {
       if (quality <= 49)
@@ -60,12 +45,14 @@ void ExpiringItem::updateAllItems() {
   }
 }
 
+
+
 MaturingItem::MaturingItem(string i_name, int i_sellIn, int i_quality) {
   name = i_name;
   sellIn = i_sellIn;
   quality = i_quality;
 };
-void MaturingItem::updateAllItems() {
+void MaturingItem::updateItems() {
 
   if (quality < Max_Quality && sellIn > 0) {
     quality += 1;
@@ -85,13 +72,15 @@ void MaturingItem::updateAllItems() {
   }
 };
 
+
+
 ConjuredItem::ConjuredItem(string i_name, int i_sellIn, int i_quality) {
   name = i_name;
   sellIn = i_sellIn;
   quality = i_quality;
 }
 
-void ConjuredItem::updateAllItems() {
+void ConjuredItem::updateItems() {
 
   if (quality > Min_Quality) {
     this->quality -= 2;
@@ -109,11 +98,13 @@ void ConjuredItem::updateAllItems() {
   }
 }
 
+
+
 LegendaryItem::LegendaryItem(string i_name, int i_sellIn, int i_quality) {
   name = i_name;
   sellIn = i_sellIn;
   quality = i_quality;
 }
-void LegendaryItem::updateAllItems() {
+void LegendaryItem::updateItems() {
   //
 }

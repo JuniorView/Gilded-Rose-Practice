@@ -34,7 +34,7 @@ public:
 
   void updatesellIn();
 
-  virtual void updateAllItems() = 0;
+  virtual void updateItems() = 0;
   virtual ~Item() = default;
 
 protected:

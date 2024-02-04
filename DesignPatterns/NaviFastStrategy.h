@@ -1,10 +1,10 @@
 #ifndef NAVIFAST_H
 #define NAVIFAST_H
 
-
+#include "NavigationStrategy.h"
 #include "Navigation.h"
 
-    class NaviFast: public Navigation {
+    class NaviFastStrategy: public NavigationStrategy {
     private:
         void calculateRoute() override;
     };

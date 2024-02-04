@@ -1,5 +1,6 @@
 #include "Item.h"
 #include "ItemTypes.h"
+#include "NormalItem.h"
 #include <string>
 #include <vector>
 

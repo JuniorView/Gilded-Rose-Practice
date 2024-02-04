@@ -12,7 +12,7 @@ GildedRose::~GildedRose() {
 
 void GildedRose::updateQuality() {
   for (auto &pitem : items) {
-    pitem->updateAllItems();
+    pitem->updateItems();
   }
 };
 
@@ -29,5 +29,6 @@ Item *GildedRose::createItem(string name, int sellIn, int quality) const {
   if (name == "Conjured Mana Cake") {
     return new ConjuredItem(name, sellIn, quality);
   }
+
   return new NormalItem(name, sellIn, quality);
 };

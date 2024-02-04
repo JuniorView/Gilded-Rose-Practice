@@ -1,6 +1,6 @@
 #include <iostream>
-#include "NaviScenic.h"
+#include "NaviScenicStrategy.h"
 
-void NaviScenic::calculateRoute() {
+void NaviScenicStrategy::calculateRoute() {
     std::cout << "Calculating most scenic Route...\n";
 }
