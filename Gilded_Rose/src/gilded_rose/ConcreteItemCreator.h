@@ -4,8 +4,8 @@
 
 #ifndef GILDEDROSE_CONCRETEITEMCREATOR_H
 #define GILDEDROSE_CONCRETEITEMCREATOR_H
-#include "ItemCreator.h"
-#include "Item.h"
+#include  "ItemCreator.h"
+#include  "Item.h"
 
 class ConcreteItemCreator : public ItemCreator {
 

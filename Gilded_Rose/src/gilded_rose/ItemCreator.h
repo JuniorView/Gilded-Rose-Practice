@@ -4,7 +4,7 @@
 
 #ifndef GILDEDROSE_ITEMCREATOR_H
 #define GILDEDROSE_ITEMCREATOR_H
-#include "item.h"
+#include "Item.h"
 #include "ItemTypes.h"
 /*   All  the subtypes/subclasses(items) are implemented in ItemTypte.h   */
 #include "NormalItem.h"
