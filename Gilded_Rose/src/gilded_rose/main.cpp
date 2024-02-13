@@ -24,8 +24,8 @@ int main() {
   for (int day = 0; day <= 30; day++) {
     cout << "-------- day " << day << " --------" << endl;
     cout << "name, sellInDays, quality" << endl;
-    for (vector<Item *>::iterator i = items.begin(); i != items.end(); i++) {
-      cout << *(*i) << endl;
+    for (auto & item : items) {
+      cout << *item << endl;
     }
     cout << endl;
 

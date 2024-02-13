@@ -7,7 +7,7 @@
 
 TEST(GildedRoseTest, Day01) {
   vector<Item *> items;
-  GildedRose G(items);
+  GildedRose G(items) ;
 
   items.push_back(G.createItem("+5 Dexterity Vest", 10, 20));
   items.push_back(G.createItem("Aged Brie", 2, 0));

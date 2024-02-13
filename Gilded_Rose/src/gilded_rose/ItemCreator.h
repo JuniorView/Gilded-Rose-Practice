@@ -12,8 +12,8 @@
 class ItemCreator {
 
 public:
-   virtual Item *createItem(string, int, int) const =0;
-   virtual ~ItemCreator()=default;
+   virtual Item *createItem(string, int, int) const =0 ;
+   virtual ~ItemCreator()=default ;
 };
 
 #endif // GILDEDROSE_ITEMCREATOR_H

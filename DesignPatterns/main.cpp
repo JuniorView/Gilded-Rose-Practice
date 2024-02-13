@@ -26,7 +26,7 @@ int main() {
 
    /*delete fastStrategy;
    delete pStrategy;
-   delete display;*/
+   delete display; */
 
 
 

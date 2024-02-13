@@ -13,7 +13,7 @@ public:
 private:
     //virtual void calculateRoute()=0; //removed from Navigation
     NavigationStrategy*  navigationStrategy;
-    DisplayStrategy* displayStrategy;
+    DisplayStrategy* displayStrategy ;
 
 
 

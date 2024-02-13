@@ -3,6 +3,7 @@
 //
 
 #include "ConcreteItemCreator.h"
+
 Item * ConcreteItemCreator ::createItem(string name, int sellIn, int quality) const {
   if (name == "Backstage passes to a TAFKAL80ETC concert") {
     return new ExpiringItem(name, sellIn, quality);

@@ -6,7 +6,7 @@ GildedRose::GildedRose(vector<Item *> &items)
 
     : items(items){
           auto *concreteItemCreator = new ConcreteItemCreator() ;
-          itemCreator=concreteItemCreator;
+          itemCreator=concreteItemCreator ;
       };
 
 GildedRose::~GildedRose() {

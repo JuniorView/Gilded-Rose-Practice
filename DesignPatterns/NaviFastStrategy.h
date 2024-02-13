@@ -5,7 +5,7 @@
 #include "Navigation.h"
 
     class NaviFastStrategy: public NavigationStrategy {
-    public:
+    public :
         void calculateRoute() override;
         ~NaviFastStrategy() override=default;
     };
