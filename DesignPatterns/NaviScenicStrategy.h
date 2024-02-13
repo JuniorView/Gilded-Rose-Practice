@@ -5,8 +5,9 @@
 #include "Navigation.h"
 
 class NaviScenicStrategy: public NavigationStrategy {
-private:
+public:
     void calculateRoute() override;
+    ~NaviScenicStrategy() override =default;
 };
 
 

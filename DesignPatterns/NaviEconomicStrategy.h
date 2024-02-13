@@ -5,8 +5,9 @@
 #include "NavigationStrategy.h"
 
 class NaviEconomicStrategy: public NavigationStrategy {
-private:
+public:
     void calculateRoute() override;
+    ~NaviEconomicStrategy() override=default;
 };
 
 

@@ -5,4 +5,4 @@ void NaviFastStrategy::calculateRoute() {
         std::cout << "Calculating fastest Route...\n";
 }
 
-NavigationStrategy::~NavigationStrategy() = default;
+//NavigationStrategy::~NavigationStrategy() = default;

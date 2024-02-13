@@ -1,8 +1,13 @@
 #include "Item.h"
 #include "ItemTypes.h"
 #include "NormalItem.h"
+#include "ItemCreator.h"
+#include "ConcreteItemCreator.h"
 #include <string>
 #include <vector>
+
+/*    NOTICE    */
+/*   All the subtypes/subclasses(items) are implemented in ItemType.h   */
 
 using namespace std;
 
@@ -15,4 +20,8 @@ public:
   virtual ~GildedRose();
 
   void updateQuality();
+
+private:
+
+  ItemCreator *itemCreator;
 };

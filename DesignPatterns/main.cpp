@@ -4,6 +4,9 @@
 //#include "NaviEconomicStrategy.h"
 #include "NaviFastStrategy.h"
 #include "NaviScenicStrategy.h"
+#include "DisplayStrategy.h"
+#include "display_2D.h"
+#include "display_3D.h"
 //#include "NavigationStrategy.h"
 
 int main() {
@@ -13,7 +16,8 @@ int main() {
     //c.init();
    // NavigationStrategy* navigationStrategy= new NaviFastStrategy() ;
    auto*  fastStrategy = new NaviFastStrategy(); // using auto to avoid duplicate the type.
-   Navigation navigation( fastStrategy);
+   auto* display= new display_2D();
+   Navigation navigation( fastStrategy,display);
    navigation.init();
 
    auto* pStrategy = new NaviScenicStrategy();
@@ -22,6 +26,7 @@ int main() {
 
    delete fastStrategy;
    delete pStrategy;
+   delete display;
 
 
 

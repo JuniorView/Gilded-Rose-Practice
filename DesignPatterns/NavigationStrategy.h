@@ -10,7 +10,7 @@ public:
 
    virtual void calculateRoute() =0;
 
-   virtual ~NavigationStrategy();
+   virtual ~NavigationStrategy()= default;
 };
 
 
