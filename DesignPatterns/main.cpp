@@ -24,9 +24,9 @@ int main() {
    navigation.setNavigationStrategy(pStrategy); //change strategies at runtime
    navigation.init();
 
-   delete fastStrategy;
+   /*delete fastStrategy;
    delete pStrategy;
-   delete display;
+   delete display;*/
 
 
 
