@@ -1,12 +1,4 @@
-:warning: Always open **one of the subfolders** in your IDE (e.g. CLion) **NOT** the complete Gitlab folder! :warning:
-
-Dear students,
-
-this is the GitLab-Project for the lab of OOAD. It contains code, that you will need for the exercises of the lab.
-
-You have to commit your preparation and your follow-up of the exercises into this project. 
-Based on those results you will get the attestation for the lab.
-
-Be proud of your software!
-
-Ralf Hahn
+---------------<h1> Welcome to the Gilded Rose Refactoring Kata project! <h1>--------------------- 
+This repository contains my implementation of the Gilded Rose practice,
+a popular coding kata(self-contained problems that allow developers to practice various aspects of coding, such as writing clean code, refactoring, testing, and applying design patterns)
+used to practice refactoring legacy code and adding new features to a pre-existing codebase.
